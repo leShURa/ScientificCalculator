@@ -40,6 +40,7 @@ const buttons = [
   { label: '.', style: 'number' },
   { label: '%', style: 'function' },
 ]
+  
 </script>
 
 <template>
