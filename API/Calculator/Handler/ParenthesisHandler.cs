@@ -1,15 +1,11 @@
-using Calculator.Features;
+using Features.Calcul;
 
 namespace Handler.ParenthesisHandler;
 
 class ParenthesisHandler
 {
-    internal List<string> CalculateWithParenthesis(string expression)
+    internal List<string> CalculateWithParenthesis(List<string> tokens)
 {
-    List<string> tokens = expression
-        .Split((char[])null, StringSplitOptions.RemoveEmptyEntries)
-        .ToList();
-
     int openIndex = tokens.LastIndexOf("(");
 
     // Aucune parenthèse ouvrante : l'expression est prête à être calculée.

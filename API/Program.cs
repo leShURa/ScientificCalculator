@@ -15,25 +15,14 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 
-app.MapGet("/calculator/{expression}", (string expression) =>
+app.MapPost("/api/create_function", async (FunctionRequest requestBody) =>
 {
-    try
-    {
-        
-    }
-    catch (FormatException)
-    {
-        return Results.BadRequest("Invalid expression format.");
-    }
-    catch (DivideByZeroException)
-    {
-        return Results.BadRequest("Division by zero is not allowed.");
-    }
-    catch 
-})
-.WithName("GetWeatherForecast");
+    
+}).WithName("CreateFunction");
 
-
+app.MapPost("/api/calculate_expression", async (string expression) =>
+{
+    
+}).WithName("CalculateExpression");
 app.Run("https://localhost:5000");
-
 

@@ -1,4 +1,4 @@
-namespace Calculator.Features;
+namespace Features.Calcul;
 
 static class Calcul
 {
